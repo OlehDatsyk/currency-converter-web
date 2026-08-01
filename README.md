@@ -309,25 +309,25 @@ Try it out:
 ```
 currency-converter-web/
 │
-├── app.py                     # Flask app: defines web routes (/) and API routes (/api/...)
+├── app.py # Flask app: defines web routes (/) and API routes (/api/...)
 │
 ├── services/
-│   ├── __init__.py            # Marks this folder as a Python package
-│   └── exchange_service.py    # All exchange-rate fetching/caching/conversion logic
+│   ├── __init__.py # Marks this folder as a Python package
+│   └── exchange_service.py # All exchange-rate fetching/caching/conversion logic
 │
 ├── templates/
-│   └── index.html             # The single HTML page (Jinja2 template rendered by Flask)
+│   └── index.html # The single HTML page (Jinja2 template rendered by Flask)
 │
 ├── static/
 │   ├── css/
-│   │   └── style.css          # All styling: theme, glassmorphism, layout, animations
+│   │   └── style.css # All styling: theme, glassmorphism, layout, animations
 │   └── js/
-│       └── script.js          # Frontend logic: fetch calls, dropdowns, swap, theming
+│       └── script.js # Frontend logic: fetch calls, dropdowns, swap, theming
 │
-├── requirements.txt           # Exact Python package versions this project needs
-├── .env.example                # Template for environment variables (copy to .env)
-├── .gitignore                  # Files/folders Git should ignore (venv, .env, caches...)
-└── README.md                   # This file
+├── requirements.txt # Exact Python package versions this project needs
+├── .env.example # Template for environment variables (copy to .env)
+├── .gitignore # Files/folders Git should ignore (venv, .env, caches...)
+└── README.md # This file
 ```
 
 **Why this structure?**
