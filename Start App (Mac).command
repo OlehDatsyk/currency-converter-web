@@ -16,9 +16,9 @@
 # where it was double-clicked from.
 cd "$(dirname "$0")" || exit 1
 
-echo "============================================================"
-echo "  CineSearch - Movie Search App"
-echo "============================================================"
+echo "==========================================================="
+echo "  CineSearch - Movie Search App (Was made by Oleh Datsyk)"
+echo "==========================================================="
 echo ""
 
 # ------------------------------------------------------------
@@ -136,7 +136,7 @@ echo "[6/6] Starting CineSearch..."
 echo ""
 echo "------------------------------------------------------------"
 echo "  The app will start below. Once you see a line like:"
-echo "      * Running on http://127.0.0.1:5000"
+echo "      * Running on http://127.0.0.1:1001"
 echo "  open that address in your web browser."
 echo ""
 echo "  To stop the app, come back to this window and press"

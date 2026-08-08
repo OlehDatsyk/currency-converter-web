@@ -226,12 +226,12 @@ python app.py
 
 You should see output like:
 ```
- * Running on http://127.0.0.1:5000
+ * Running on http://127.0.0.1:1001
 ```
 
 Open your web browser and go to:
 ```
-http://127.0.0.1:5000
+http://127.0.0.1:1001
 ```
 
 You should see the CineSearch homepage with a grid of currently popular movies. 🎉
@@ -292,8 +292,8 @@ Type `Y` to confirm, then try activating the virtual environment again. Or simpl
 **"TMDb rejected the API key (401 Unauthorized)"**
 → Double-check you copied the entire API key with no extra spaces, and that you copied the **API Key (v3 auth)**, not the "API Read Access Token" (a different, longer value).
 
-**Port 5000 already in use / "Address already in use"**
-→ Something else on your computer is using port 5000 (on Macs, this is sometimes AirPlay Receiver). Either close that other program, or open `app.py`, find the line `app.run(debug=True, host="0.0.0.0", port=5000)` and change `5000` to another number like `5050`, then visit `http://127.0.0.1:5050` instead.
+**Port 1001 already in use / "Address already in use"**
+→ Something else on your computer is using port 1001 (on Macs, this is sometimes AirPlay Receiver). Either close that other program, or open `app.py`, find the line `app.run(debug=True, host="0.0.0.0", port=1001)` and change `1001` to another number like `5050`, then visit `http://127.0.0.1:5050` instead.
 
 **Nothing happens when I double-click the startup script**
 → See the script-specific notes in the `Start App.bat` (Windows) or `Start App (Mac).command` (Mac) sections of this guide, and make sure you completed Steps 2–11 at least once manually first.

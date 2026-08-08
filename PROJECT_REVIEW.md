@@ -40,10 +40,10 @@ Since `README.md` already exists, a new one was **not** generated, as instructed
 ### 🔴 High Severity
 
 **H1 — `debug=True` is hardcoded, and ignores the `DEBUG` config value that already exists**
-- **File:** `app.py`, line 103: `app.run(debug=True, host="0.0.0.0", port=5000)`
+- **File:** `app.py`, line 103: `app.run(debug=True, host="0.0.0.0", port=1001)`
 - **Description:** `config.py` already defines `DEBUG = os.environ.get("FLASK_DEBUG", "True") == "True"` intended to control this exact behavior, but `app.py` never reads it — it hardcodes `debug=True` directly. This means even if a user sets `FLASK_DEBUG=False` in their `.env` file, the app still runs in debug mode.
 - **Why it matters:** Flask's debug mode enables the Werkzeug interactive debugger, which allows **arbitrary Python code execution from the browser** if the debug endpoint is ever reachable (e.g. accidentally deployed, exposed via `host="0.0.0.0"` on a shared network, or port-forwarded). This is one of the most common real-world Flask misconfigurations that leads to full server compromise. Combined with `host="0.0.0.0"` (binds to all network interfaces, not just localhost), this significantly increases exposure on shared Wi-Fi/LAN.
-- **Recommended improvement:** Use the config value instead of a literal: `app.run(debug=app.config.get("DEBUG", False), host="127.0.0.1", port=5000)`. Default `host` to `127.0.0.1` for local development and only bind to `0.0.0.0` deliberately when needed (e.g. containerized deployment behind a reverse proxy).
+- **Recommended improvement:** Use the config value instead of a literal: `app.run(debug=app.config.get("DEBUG", False), host="127.0.0.1", port=1001)`. Default `host` to `127.0.0.1` for local development and only bind to `0.0.0.0` deliberately when needed (e.g. containerized deployment behind a reverse proxy).
 
 **H2 — No safeguard against reaching production with the default `SECRET_KEY`**
 - **File:** `config.py`, line: `SECRET_KEY = os.environ.get("SECRET_KEY", "dev-secret-key-change-me")`

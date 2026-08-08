@@ -266,13 +266,13 @@ python app.py
 Expected terminal output:
 
 ```
-2026-07-08 12:00:01 [INFO] currency-converter: Starting Currency Converter on http://127.0.0.1:5000
+2026-07-08 12:00:01 [INFO] currency-converter: Starting Currency Converter on http://127.0.0.1:1001
  * Serving Flask app 'app'
  * Debug mode: on
 WARNING: This is a development server. Do not use it in a production deployment.
  * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://192.168.x.x:5000
+ * Running on http://127.0.0.1:1001
+ * Running on http://192.168.x.x:1001
 Press CTRL+C to quit
 ```
 
@@ -285,13 +285,13 @@ Leave this terminal running - it is your live server. To stop the server at any 
 Open your web browser and go to:
 
 ```
-http://127.0.0.1:5000
+http://127.0.0.1:1001
 ```
 
 or
 
 ```
-http://localhost:5000
+http://localhost:1001
 ```
 
 You should see the **Exchange Desk** currency converter UI, with dropdowns already populated and a default conversion (1 USD -> EUR) calculated automatically.
@@ -378,7 +378,7 @@ Type `Y` and press Enter when prompted, then re-run `venv\Scripts\Activate.ps1`.
 ---
 
 ### ❌ `Address already in use` / `OSError: [Errno 48] Address already in use`
-**Cause:** Something else (maybe a previous run of this app) is already using port 5000.
+**Cause:** Something else (maybe a previous run of this app) is already using port 1001.
 **Fix:** Either stop the other process, or run this app on a different port by editing `.env`:
 ```
 PORT=5001

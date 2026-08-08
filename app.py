@@ -183,7 +183,7 @@ def server_error(_error):
 
 
 if __name__ == "__main__":
-    port = int(os.getenv("PORT", 5000))
+    port = int(os.getenv("PORT", 1001))
     debug = os.getenv("FLASK_DEBUG", "True").lower() in ("1", "true", "yes")
 
     logger.info("Starting Currency Converter on http://127.0.0.1:%s", port)
